@@ -1,36 +1,123 @@
-<div class="container">
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>For You 💗</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+body {
+margin: 0;
+padding: 0;
+font-family: 'Poppins', sans-serif;
+background: linear-gradient(135deg, #ffd6e8, #ffc2d1, #ffe6f0);
+height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+overflow: hidden;
+}
+
+/* Glass Card */
+.card {
+background: rgba(255,255,255,0.25);
+backdrop-filter: blur(15px);
+border-radius: 25px;
+padding: 40px;
+width: 90%;
+max-width: 600px;
+text-align: center;
+box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+animation: fadeIn 1.5s ease-in-out;
+}
+
+h1 {
+color: #ff4d88;
+font-size: 32px;
+}
+
+p {
+color: #cc3366;
+font-size: 15px;
+line-height: 1.8;
+}
+
+button {
+margin-top: 20px;
+padding: 10px 25px;
+border-radius: 30px;
+border: none;
+background: #ff4d88;
+color: white;
+font-size: 14px;
+cursor: pointer;
+transition: 0.3s;
+}
+
+button:hover {
+transform: scale(1.1);
+background: #e6005c;
+}
+
+@keyframes fadeIn {
+from {opacity: 0; transform: translateY(20px);}
+to {opacity: 1; transform: translateY(0);}
+}
+
+/* Floating hearts */
+.heart {
+position: absolute;
+font-size: 20px;
+animation: float 6s linear infinite;
+}
+
+@keyframes float {
+0% { transform: translateY(100vh); opacity:1; }
+100% { transform: translateY(-10vh); opacity:0; }
+}
+</style>
+</head>
+
+<body>
+
+<audio autoplay loop>
+<source src="lagu.mp3" type="audio/mpeg">
+</audio>
+
+<div class="card">
 <h1>For You 💗</h1>
 
 <p>Hi Weni 🌸</p>
 
 <p>
-Walaupun sekarang kita dah bawa haluan masing-masing,
-aku harap kamu baik-baik saja di sana.
+Aku harap kamu baik-baik saja di sana.
 </p>
 
 <p>
 Kerja jauh dari keluarga bukan sesuatu yang mudah.
-Jaga kesihatan, tepat masa makan, dan jangan paksa diri terlalu kuat.
-</p>
-
-<p>
-Cuaca di sana sejuk, jadi jangan lupa pakai pakaian tebal.
+Tolong jaga kesihatan, Jangan skip makan,
+jangan paksa diri terlalu kuat, dan jangan lupa pakai baju tebal.
 Kesihatan kamu jauh lebih penting daripada apa pun.
 </p>
 
-<p style="margin-top:20px; font-weight:500;">
-I’m proud of you.
-Proud of how brave you are chasing your goals jauh dari rumah.
+<p>
+I'm proud of you. Proud of how brave you are chasing your goals jauh dari rumah.
 Tak semua orang mampu buat apa yang kamu buat sekarang.
 </p>
 
 <p>
 Aku mungkin tak lagi berada di sisi kamu,
-tapi saya tetap berdoa semuanya dipermudahkan untuk kamu.
+tapi aku tetap doakan semuanya dipermudahkan untuk kamu.
 Stay strong, but also be gentle with yourself 💕
-
-HAPPY VALENTINES DAY 💗 God Bless You Alwayss 💕💕
 </p>
 
-<button onclick="message()">Click here 🥺</button>
+<button onclick="showLove()">Click here 🥺</button>
 </div>
+
+<script>
+function showLove() {
+alert("No matter how far you are, please take care of yourself. You matter more than you think... HAPPY VALENTINES DAY 💗");
+}
+
+setInterval(function() {
+var heart =
